@@ -16,8 +16,7 @@ body {
 
 
 .grid-container > div {
-  /*background-color: rgba(255, 255, 255, 0.8);*/
-  /*text-align: center;*/
+
   padding: 100px 0;
   font-size: 30px;
   
@@ -26,8 +25,8 @@ body {
 
 }
 #box-1{
-background-image: radial-gradient(circle,#D3D3D3 , green); ;
-color: #FFFAF0;
+background-image: radial-gradient(circle,#D3D3D3 , #3399ff); ;
+color: white;
 text-align: center;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
