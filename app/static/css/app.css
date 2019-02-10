@@ -1,3 +1,80 @@
 body {
     padding-top: 5rem;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+  
+
+
+  padding: 50px;
+}
+
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  /*text-align: center;*/
+  padding: 100px 0;
+  font-size: 30px;
+  
+  border: solid grey 1px;
+
+
+}
+#box-1{
+background-image: radial-gradient(circle,#D3D3D3 , green); ;
+color: #FFFAF0;
+text-align: center;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+
+}
+
+
+#box-2{
+grid-row: 2; 
+background-color: white;
+text-align: center;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+#box-1,#box-2{
+grid-column: 2;
+}
+
+#profile {
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    
+    
+}
+
+#display{
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  text-align: center;
+  width: 600px;
+  margin-top: 80px;
+  margin-left: 150px;
+  
+}
+
+#button{
+  color: white;
+  background-color: #90EE90;
+  border-radius: 5%;
+  width: 200px;
+  margin-top: 50px
+  
+}
+#justify{
+  text-align: justify;
+  margin-left: 40px;
+  margin-right: 40px;
+  
+}

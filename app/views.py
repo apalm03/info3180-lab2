@@ -6,7 +6,9 @@ This file creates your application.
 """
 
 from app import app
+import datetime
 from flask import render_template, request, redirect, url_for, flash
+
 
 
 ###
@@ -22,12 +24,40 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Aaron Myrie")
+    
+@app.route('/profile/')
+def profile():
+    userInfo ={
+        'displaypic' :url_for('static', filename='image/acm.jpg'),
+        'fullname': 'Aaron Myrie',
+        'username': 'acmyrie',
+        'location': 'Kingston, Jamaica',
+        'joined_date': format_date_joined(2018,12,22),
+        'bio': "I am brilliant, talented young man who enjoys doing software and web development. If you wish to work on a new project, you can contact me." ,
+        'num_of_posts': '20',
+        'num_of_followers': '200',
+        'num_following': '100'
+    }
+    return render_template('profile.html', userinfo = userInfo);
+    
+    
+    
+##now = datetime.datetime.now() # today's date
+def format_date_joined(year,month,day):
+    date_joined = datetime.date(year, month, day) # a specific date
+    return "Joined " + date_joined.strftime("%B, %Y") 
+    
 
 
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+
+ 
+    
+    
+
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
